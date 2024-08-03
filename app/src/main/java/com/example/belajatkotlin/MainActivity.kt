@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity() {
         btnHitung = findViewById(R.id.btnHitung)
         btnReset = findViewById(R.id.btnReset)
         tvHasil = findViewById(R.id.tvHasil)
-
-
-
         setInitialState()
 
         btnHitung.setOnClickListener {
@@ -41,12 +38,9 @@ class MainActivity : AppCompatActivity() {
                 val jumlahBarang = jumlah.toInt()
                 val totalBayar = hargaBarang * jumlahBarang
 
-
                 tvHasil.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20.toFloat())
                 tvHasil.setTextColor(ContextCompat.getColor(this, R.color.warna1))
-
                 tvHasil.text = "Total Bayar: Rp. $totalBayar"
-
                 btnHitung.isEnabled = false
                 btnReset.isEnabled=true
                 etHargaBarang.isEnabled = false
@@ -74,9 +68,7 @@ class MainActivity : AppCompatActivity() {
                 etHargaBarang.isEnabled = true
                 etJumlahBarang.isEnabled = true
             }
-
         }
-
     }
 
     private fun setActiveState() {
